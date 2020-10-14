@@ -7,5 +7,10 @@
             "email": "akosiyawin@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "flamist\\package\\": "."
+        }
+    }
 }
