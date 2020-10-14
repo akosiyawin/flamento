@@ -21,7 +21,7 @@ class Application
     public Response $response;
     public Router $route;
     public Controller $controller;
-    public View $view; //Usage in Base Controller
+    public View $view; //Usage in Base Controllers
     public Database $db;
     public Session $session;
     public Auth $auth;
