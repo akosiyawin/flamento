@@ -1,13 +1,13 @@
 <?php
 /**
  * Class Session
- * @package app\core
+ * @package flamist\package
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core;
+namespace flamist\package;
 
-use app\core\exception\ForbiddenException;
+use flamist\package\exception\ForbiddenException;
 
 class Session
 {

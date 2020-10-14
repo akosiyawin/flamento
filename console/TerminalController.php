@@ -5,15 +5,15 @@
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\console;
+namespace flamist\package\console;
 
 
-use app\core\Application;
-use app\core\Bull;
-use app\core\Controller;
-use app\core\database\Schema;
-use app\core\route\Request;
-use app\core\route\Response;
+use flamist\package\Application;
+use flamist\package\Bull;
+use flamist\package\Controller;
+use flamist\package\database\Schema;
+use flamist\package\route\Request;
+use flamist\package\route\Response;
 
 class TerminalController extends Controller
 {

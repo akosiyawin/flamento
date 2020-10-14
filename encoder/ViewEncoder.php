@@ -1,18 +1,18 @@
 <?php
 /**
  * Class ViewEncoder
- * @package app\core
+ * @package flamist\package
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\encoder;
+namespace flamist\package\encoder;
 
 /*
  * Todo: Form important functionalities (enc-type,etc..)*/
 
-use app\core\Application;
-use app\core\database\Model;
-use app\core\form\Form;
+use flamist\package\Application;
+use flamist\package\database\Model;
+use flamist\package\form\Form;
 
 class ViewEncoder extends Encoder
 {

@@ -1,17 +1,17 @@
 <?php
 /**
  * Class Blueprint
- * @package app\core\database
+ * @package flamist\package\database
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
 //Assuming that the user is using MYSQL for now
 //TODO:: Eloquent model
 
-namespace app\core\database;
+namespace flamist\package\database;
 
 
-use app\core\exception\UserException;
+use flamist\package\exception\UserException;
 
 class Blueprint
 {

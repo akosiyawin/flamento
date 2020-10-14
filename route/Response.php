@@ -1,11 +1,11 @@
 <?php
 /**
  * Class Response
- * @package app\core\route
+ * @package flamist\package\route
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\route;
+namespace flamist\package\route;
 
 
 class Response

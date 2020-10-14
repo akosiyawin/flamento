@@ -1,11 +1,11 @@
 <?php
 /**
  * Interface RouterFace
- * @package app\core\faces
+ * @package flamist\package\faces
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\route;
+namespace flamist\package\route;
 
 /*
  * Required notice

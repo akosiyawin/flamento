@@ -1,19 +1,19 @@
 <?php
 /**
  * Class Router
- * @package app\core\route
+ * @package flamist\package\route
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\route;
+namespace flamist\package\route;
 
 
-use app\core\Application;
-use app\core\console\TerminalController;
-use app\core\Controller;
-use app\core\exception\NotFoundException;
-use app\core\exception\UserException;
-use app\core\middlewares\Middleware;
+use flamist\package\Application;
+use flamist\package\console\TerminalController;
+use flamist\package\Controller;
+use flamist\package\exception\NotFoundException;
+use flamist\package\exception\UserException;
+use flamist\package\middlewares\Middleware;
 
 class Router implements RouterFace
 {

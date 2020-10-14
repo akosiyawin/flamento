@@ -1,15 +1,15 @@
 <?php
 /**
  * Class Encoder
- * @package app\core\encoder
+ * @package flamist\package\encoder
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\encoder;
+namespace flamist\package\encoder;
 
 
-use app\core\Application;
-use app\core\form\Form;
+use flamist\package\Application;
+use flamist\package\form\Form;
 
 abstract class Encoder
 {
@@ -60,7 +60,7 @@ abstract class Encoder
 
                 try {
                     /** @var $decode {field($user,'email','text')}*/
-                    $success = eval("\$line = str_replace(\$decode,\app\core\\form\Form::$field,\$line);");
+                    $success = eval("\$line = str_replace(\$decode,\flamist\package\\form\Form::$field,\$line);");
                     return $line;
                 }catch (\ParseError $error)
                 {

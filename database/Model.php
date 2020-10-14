@@ -1,17 +1,17 @@
 <?php
 /**
  * Class Model
- * @package app\core\database
+ * @package flamist\package\database
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\database;
+namespace flamist\package\database;
 
 
-use app\core\Application;
-use app\core\Bull;
-use app\core\constants\RULE;
-use app\core\Validator;
+use flamist\package\Application;
+use flamist\package\Bull;
+use flamist\package\constants\RULE;
+use flamist\package\Validator;
 
 abstract class Model extends DBModel
 {

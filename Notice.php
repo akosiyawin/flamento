@@ -1,11 +1,11 @@
 <?php
 /**
  * Class Notice
- * @package app\core
+ * @package flamist\package
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core;
+namespace flamist\package;
 
 
 abstract class Notice

@@ -1,11 +1,11 @@
 <?php
 /**
  * Class NotFoundException
- * @package app\core\exception
+ * @package flamist\package\exception
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\exception;
+namespace flamist\package\exception;
 
 
 class NotFoundException extends \Exception

@@ -1,11 +1,11 @@
 <?php
 /**
  * Class ForbiddenException
- * @package app\core\exception
+ * @package flamist\package\exception
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\exception;
+namespace flamist\package\exception;
 
 
 class ForbiddenException extends \Exception

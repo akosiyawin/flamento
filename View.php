@@ -1,16 +1,16 @@
 <?php
 /**
  * Class View
- * @package app\core
+ * @package flamist\package
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core;
+namespace flamist\package;
 
 
-use app\core\encoder\LayoutEncoder;
-use app\core\encoder\ViewEncoder;
-use app\core\exception\UserException;
+use flamist\package\encoder\LayoutEncoder;
+use flamist\package\encoder\ViewEncoder;
+use flamist\package\exception\UserException;
 
 class View
 {

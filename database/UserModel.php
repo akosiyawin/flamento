@@ -1,11 +1,11 @@
 <?php
 /**
  * Class UserModel
- * @package app\core\database
+ * @package flamist\package\database
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\database;
+namespace flamist\package\database;
 
 
 abstract class UserModel extends Model

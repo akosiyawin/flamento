@@ -1,14 +1,14 @@
 <?php
 /**
  * Class Controller
- * @package app\core\route
+ * @package flamist\package\route
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core;
+namespace flamist\package;
 
 
-use app\core\middlewares\Middleware;
+use flamist\package\middlewares\Middleware;
 
 class Controller
 {

@@ -1,15 +1,15 @@
 <?php
 /**
  * Class LayoutEncoder
- * @package app\core\encoder
+ * @package flamist\package\encoder
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\encoder;
+namespace flamist\package\encoder;
 
 
-use app\core\Application;
-use app\core\form\Form;
+use flamist\package\Application;
+use flamist\package\form\Form;
 
 class LayoutEncoder extends Encoder
 {

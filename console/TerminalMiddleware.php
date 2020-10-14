@@ -1,14 +1,14 @@
 <?php
 /**
  * Class TerminalMiddleware
- * @package app\core\console
+ * @package flamist\package\console
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\console;
+namespace flamist\package\console;
 
 
-use app\core\middlewares\Middleware;
+use flamist\package\middlewares\Middleware;
 
 class TerminalMiddleware extends Middleware
 {

@@ -1,11 +1,11 @@
 <?php
 /**
  * Class TYPE
- * @package app\core\constants
+ * @package flamist\package\constants
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\constants;
+namespace flamist\package\constants;
 
 abstract class TYPE
 {

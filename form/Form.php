@@ -1,17 +1,17 @@
 <?php
 /**
  * Class Form
- * @package app\core\form
+ * @package flamist\package\form
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\form;
+namespace flamist\package\form;
 
 
-use app\core\Bull;
-use app\core\database\Model;
-use app\core\exception\UserException;
-use app\core\Notice;
+use flamist\package\Bull;
+use flamist\package\database\Model;
+use flamist\package\exception\UserException;
+use flamist\package\Notice;
 
 class Form
 {

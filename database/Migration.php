@@ -2,11 +2,11 @@
 
 /**
  * Interface Migration
- * @package app\core\database
+ * @package flamist\package\database
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\database;
+namespace flamist\package\database;
 
 interface Migration
 {

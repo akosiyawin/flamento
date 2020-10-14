@@ -1,14 +1,14 @@
 <?php
 /**
  * Class Field
- * @package app\core\form
+ * @package flamist\package\form
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\form;
+namespace flamist\package\form;
 
 
-use app\core\database\Model;
+use flamist\package\database\Model;
 
 abstract class Field
 {

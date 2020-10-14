@@ -1,15 +1,15 @@
 <?php
 /**
  * Class Middleware
- * @package app\core
+ * @package flamist\package
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\middlewares;
+namespace flamist\package\middlewares;
 
 
-use app\core\Application;
-use app\core\exception\ForbiddenException;
+use flamist\package\Application;
+use flamist\package\exception\ForbiddenException;
 
 abstract class Middleware
 {

@@ -1,15 +1,15 @@
 <?php
 /**
  * Class Request
- * @package app\core\route
+ * @package flamist\package\route
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\route;
+namespace flamist\package\route;
 
 
-use app\core\Application;
-use app\core\exception\ForbiddenException;
+use flamist\package\Application;
+use flamist\package\exception\ForbiddenException;
 
 class Request
 {

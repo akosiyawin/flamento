@@ -1,14 +1,14 @@
 <?php
 /**
  * Class Auth
- * @package app\core
+ * @package flamist\package
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core;
+namespace flamist\package;
 
 
-use app\core\database\UserModel;
+use flamist\package\database\UserModel;
 
 class Auth
 {

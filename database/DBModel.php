@@ -1,15 +1,15 @@
 <?php
 /**
  * Class DBModel
- * @package app\core\database
+ * @package flamist\package\database
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core\database;
+namespace flamist\package\database;
 
 
-use app\core\Application;
-use app\core\Bull;
+use flamist\package\Application;
+use flamist\package\Bull;
 
 abstract class DBModel
 {

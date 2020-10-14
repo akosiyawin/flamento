@@ -1,17 +1,17 @@
 <?php
 /**
  * Class Application
- * @package app\core
+ * @package flamist\package
  * @author Darwin Marcelo <akosiyawin@gmail.com>
  */
 
-namespace app\core;
+namespace flamist\package;
 
 
-use app\core\database\Database;
-use app\core\route\Request;
-use app\core\route\Response;
-use app\core\route\Router;
+use flamist\package\database\Database;
+use flamist\package\route\Request;
+use flamist\package\route\Response;
+use flamist\package\route\Router;
 
 class Application
 {
