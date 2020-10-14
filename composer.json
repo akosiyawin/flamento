@@ -1,0 +1,11 @@
+{
+    "name": "yayin/flamento-core",
+    "description": "PHP MVC framework for flamentist",
+    "authors": [
+        {
+            "name": "Darwin Marcelo",
+            "email": "akosiyawin@gmail.com"
+        }
+    ],
+    "require": {}
+}
