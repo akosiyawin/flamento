@@ -17,7 +17,7 @@ use flamist\package\middlewares\Middleware;
 
 class Router implements RouterFace
 {
-    private const CONTROLLER_NAMESPACE = "app\\core\\Controller";
+    private const CONTROLLER_NAMESPACE = "flamist\\package\\Controller";
     private const HTTP_CONTROLLER_NAMESPACE = "app\\http\\controllers";
 
     private Request $request;
