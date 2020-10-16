@@ -16,7 +16,7 @@ abstract class Encoder
     protected array $params;
     protected string $file;
 
-    public function __construct(array $params = [],string $file)
+    public function __construct(array $params = [],string $file = '')
     {
         $this->params = $params;
         $this->file = $file;

@@ -21,7 +21,7 @@ class LayoutEncoder extends Encoder
      * @param array $params
      * @param string $file
      */
-    public function __construct(string $layout,array $params = [],string $file)
+    public function __construct(string $layout,array $params = [],string $file ='')
     {
         parent::__construct($params,$file);
         $this->layout = $this->encode($layout);

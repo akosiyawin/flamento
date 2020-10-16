@@ -32,8 +32,8 @@ class TerminalController extends Controller
             $command = trim($request->body()['command']);
             return $this->handleCommand($command);
         }
-        $this->setLayout("_console");
-        return Application::$app->view->defaultRenderView("_console");
+        $this->setLayout("console_layout");
+        return Application::$app->view->renderFlamento("console");
     }
 
     private function handleCommand(string $command)
@@ -68,6 +68,13 @@ class TerminalController extends Controller
     private function createController(string $name)
     {
         $name = trim($name);
+
+        if(!is_dir(Application::$rootDir."/http"))
+            mkdir(Application::$rootDir."/http");
+
+        if(!is_dir(Application::$rootDir."/http/controllers"))
+            mkdir(Application::$rootDir."/http/controllers");
+
 
         if (class_exists(Bull::NAMESPACE_HTTP_CONTROLLERS."\\$name"))
         {
@@ -108,6 +115,12 @@ class TerminalController extends Controller
     private function createModel(string $name)
     {
         $name = trim($name);
+
+        if(!is_dir(Application::$rootDir."/database"))
+            mkdir(Application::$rootDir."/database");
+
+        if(!is_dir(Application::$rootDir."/database/models"))
+            mkdir(Application::$rootDir."/database/models");
 
         if (class_exists(Bull::NAMESPACE_DATABASE_MODELS."\\$name"))
         {
@@ -155,6 +168,13 @@ class TerminalController extends Controller
     {
         $name = trim($name);
 
+        if(!is_dir(Application::$rootDir."/database"))
+            mkdir(Application::$rootDir."/database");
+
+        if(!is_dir(Application::$rootDir."/database/migrations"))
+            mkdir(Application::$rootDir."/database/migrations");
+
+
         $files = scandir(Application::$rootDir."/database/migrations");
 
         $f = array_filter($files,function ($n){
@@ -171,6 +191,13 @@ class TerminalController extends Controller
         }
         else
         {
+            //TODO:: Dito na ko nag stop
+            if($files[count($files)-1][0] !== "m")
+                return Application::$app->response->send([
+                    'message'=>"Invalid migration file is found, migrations directory can only contains migration file."
+                ],200);
+
+            exit;
             $nextID = "m_".Bull::formatNumber(substr($files[count($files)-1],2,4)+1,4);
         }
 
@@ -220,6 +247,14 @@ class TerminalController extends Controller
     private function createMiddleWare(string $name)
     {
         $name = trim($name);
+
+        if(!is_dir(Application::$rootDir."/http"))
+            mkdir(Application::$rootDir."/http");
+
+        if(!is_dir(Application::$rootDir."/http/middlewares"))
+            mkdir(Application::$rootDir."/http/middlewares");
+
+
 
         if (class_exists(Bull::NAMESPACE_HTTP_MIDDLEWARES."\\$name"))
         {

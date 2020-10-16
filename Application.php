@@ -46,8 +46,8 @@ class Application
             echo $this->route->resolve();
         } catch (\Exception $e) {
             $this->response->setStatusCode($e->getCode());
-            $this->controller->setLayout("_error"); //Uncatch error
-            echo $this->view->defaultRenderView("_error",[
+            $this->controller->setLayout("error_layout"); //Uncatch error
+            echo $this->view->renderFlamento("error",[
                 'message' => $e->getMessage(),
                 'code' => $e->getCode(),
             ]);

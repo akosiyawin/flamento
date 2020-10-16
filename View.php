@@ -101,39 +101,40 @@ class View
         return ob_get_clean(); //get and clean the buffer, now we can assign everything into a variable, this will return string.
     }
 
-    public function defaultRenderView(string $view,array $params = [])
+    public function renderFlamento(string $view, array $params = [])
     {
-        $viewContent = $this->defaultRenderOnlyView($view,$params);
-        $layoutContent = $this->defaultLayoutContent();
+        $viewContent = $this->renderFlamentoView($view,$params);
+        $layoutContent = $this->flamentoLayoutContent();
 
         return str_replace("{{content}}",$viewContent,$layoutContent);
     }
 
-    private function defaultLayoutContent()
+    private function flamentoLayoutContent()
     {
         $layout = Application::$app->controller->layout;
 
-        $file = Application::$rootDir ."/resources/default/layouts/$layout.". self::VIEW_EXTENSION;
+        $file = __DIR__ ."/layouts/$layout.". self::VIEW_EXTENSION;
         if(!file_exists($file))
             throw new UserException("$layout doesnt exist on default layouts",404);
 
         ob_start();
         include_once $file;
-        return ob_get_clean();
+        return new LayoutEncoder(ob_get_clean());
     }
 
-    private function defaultRenderOnlyView(string $view, array $params = [])
+    private function renderFlamentoView(string $view, array $params = [])
     {
         foreach ($params as $key => $value)
         {
             $$key = $value;
         }
-        $file = Application::$rootDir ."/resources/default/views/$view.". self::VIEW_EXTENSION;
+
+        $file = __DIR__ ."/views/$view.". self::VIEW_EXTENSION;
         if(!file_exists($file))
             throw new UserException("$view doesnt exist on default views",404);
 
         ob_start(); //start remembering
         include_once $file; //save everything to buffer
-        return ob_get_clean(); //get and clean the buffer, now we can assign everything into a variable, this will return string.
+        return new ViewEncoder(ob_get_clean(),$params); //get and clean the buffer, now we can assign everything into a variable, this will return string.
     }
 }

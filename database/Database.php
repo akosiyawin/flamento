@@ -52,6 +52,12 @@ class Database
         $appliedMigrations = $this->getAppliedMigrations();
         $newMigrations = [];
 
+        if(!is_dir(Application::$rootDir."/database/migrations"))
+        {
+            $this->logs("Migration is not yet, initialized.",$fromController);
+            return Application::$app->response->send(["messages"=>$this->logs]);
+        }
+
         $files = scandir(Application::$rootDir."/database/migrations");
 
 //        $toApplyMigrations = array_diff($files,$appliedMigrations); //use only if error occured

@@ -25,7 +25,7 @@ class ViewEncoder extends Encoder
      * @param string $file
      */
 
-    public function __construct(string $viewContent,array $params = [],string $file)
+    public function __construct(string $viewContent,array $params = [],string $file = '')
     {
         parent::__construct($params,$file);
         $this->viewContent = $this->encode($viewContent);
