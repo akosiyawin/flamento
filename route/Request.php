@@ -16,6 +16,8 @@ class Request
 
     public function getUrl()
     {
+
+
         if(isset($_GET['_url']))
         {
             define("RUNNING_ON_SERVE",false);
@@ -25,10 +27,13 @@ class Request
         {
             define("RUNNING_ON_SERVE",true);
             $url = $_SERVER['REQUEST_URI'];
-            if(substr_count(rtrim($url,"/"),"/") === 0)
-            {
+
+            $rootUrl = str_replace("\\","/",substr(Application::$rootDir,strrpos(Application::$rootDir,"\\")))."/public/";
+            if(strpos($url,$rootUrl) === 0)
                 $url = "/";
-            }
+
+            if(substr_count(rtrim($url,"/"),"/") === 0)
+                $url = "/";
         }
 
         if(strpos($url,"?"))
