@@ -16,23 +16,19 @@ class Request
 
     public function getUrl()
     {
-
-
-        if(isset($_GET['_url']))
-        {
-            define("RUNNING_ON_SERVE",false);
-            $url = $_GET['_url'];
-        }
-        else
+        //Todo validate if serve is not on or off
+        if($_ENV['SERVE'] === "on")
         {
             define("RUNNING_ON_SERVE",true);
             $url = $_SERVER['REQUEST_URI'];
+        }
 
-            $rootUrl = str_replace("\\","/",substr(Application::$rootDir,strrpos(Application::$rootDir,"\\")))."/public/";
-            if(strpos($url,$rootUrl) === 0)
-                $url = "/";
-
-            if(substr_count(rtrim($url,"/"),"/") === 0)
+        if($_ENV['SERVE'] === "off" )
+        {
+            define("RUNNING_ON_SERVE",false);
+            if(isset($_GET['_url']))
+                $url = $_GET['_url'];
+            else
                 $url = "/";
         }
 
