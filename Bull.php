@@ -16,14 +16,14 @@ abstract class Bull
     public const TYPE_NUMBER = "number";
 
     public const NAMESPACE_DATABASE_MODELS = "app\\database\\models";
-    public const NAMESPACE_CORE_DATABASE_MODEL = "app\\core\\database\\Model";
+    public const NAMESPACE_CORE_DATABASE_MODEL = "flamist\\package\\database\\Modell";
     public const NAMESPACE_DATABASE_MIGRATIONS = "app\\database\\migrations";
-    public const NAMESPACE_CORE_DATABASE_MIGRATION = "app\\core\\database\\Migration";
+    public const NAMESPACE_CORE_DATABASE_MIGRATION = "flamist\\package\\database\\Migration";
 
     public const NAMESPACE_HTTP_CONTROLLERS = "app\\http\\controllers";
 
     public const NAMESPACE_HTTP_MIDDLEWARES = "app\\http\\middlewares";
-    public const NAMESPACE_CORE_MIDDLEWARES_MIDDLEWARE = "app\\core\\middlewares\\Middleware";
+    public const NAMESPACE_CORE_MIDDLEWARES_MIDDLEWARE = "flamist\\package\\middlewares\\Middleware";
 
     /*public const Q_COLUMN = "column";
     public const Q_CONDITION = "condition";
