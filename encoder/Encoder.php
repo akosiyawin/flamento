@@ -60,7 +60,7 @@ abstract class Encoder
 
                 try {
                     /** @var $decode {field($user,'email','text')}*/
-                    $success = eval("\$line = str_replace(\$decode,\flamist\package\\form\Form::$field,\$line);");
+                    $success = eval("\$line = str_replace(\$decode,\\flamist\package\\form\Form::$field,\$line);");
                     return $line;
                 }catch (\ParseError $error)
                 {
